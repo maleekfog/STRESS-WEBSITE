@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-brand: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F5F0E6;
+    color: #1A1512;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.font-brand-serif {
+  font-family: var(--font-serif-brand);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
